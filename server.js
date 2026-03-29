@@ -209,7 +209,7 @@ const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
-const conferenceRoutes = require("./routes/conferenceRoutes");
+const conferenceRoutes = require("./routes/Conferenceroutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 dotenv.config();
