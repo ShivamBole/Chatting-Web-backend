@@ -219,6 +219,9 @@ const app = express();
 app.use(express.json());
 
 // ── REST routes ───────────────────────────────────────
+app.get("/",(req,resp)=>{
+  resp.send("server is running")
+})
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
