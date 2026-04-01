@@ -240,7 +240,12 @@ const server = app.listen(
 // ── Socket.io ─────────────────────────────────────────
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
-  cors: { origin: "http://localhost:3000" },
+    cors: {
+    origin: [
+      "http://localhost:3000",
+      "https://your-frontend-url.netlify.app"  // 👈 add this
+    ],
+  },
 });
 
 // ── mediasoup — start worker then open socket server ──
