@@ -217,7 +217,20 @@ connectDB();
 
 const app = express();
 app.use(express.json());
+const cors = require("cors");
 
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://chatting-website-sb.netlify.app"
+    ],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
 // ── REST routes ───────────────────────────────────────
 app.get("/",(req,resp)=>{
   resp.send("server is running")
