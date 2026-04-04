@@ -253,12 +253,8 @@ const server = app.listen(
 // ── Socket.io ─────────────────────────────────────────
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
-    cors: {
-    origin: [
-      "http://localhost:3000",
-      "https://chatting-website-sb.netlify.app"  // 👈 add this
-    ],
-      credentials: true,
+  cors: {
+    origin: "*",
   },
 });
 
